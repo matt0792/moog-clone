@@ -1,0 +1,163 @@
+$standard: 30px;
+$smaller: 20px;
+$content-size: calc(100vh - 90px);
+
+// Stops vertical scroll/bouncing effect in chrome
+body {
+  overflow: hidden;
+}
+
+.navbar {
+  height: 90px;
+}
+
+.navbar-brand img {
+  max-height: 100%;
+  height: auto;
+  width: 120px;
+}
+
+.button-format,
+.searchbar {
+  outline: none;
+  border: none;
+  background: none;
+}
+
+.icon {
+  color: white;
+}
+
+.navbar-hamburger {
+  font-size: $standard;
+}
+
+.navbar-search {
+  font-size: $smaller;
+}
+
+nav .navbar-nav li a {
+  color: white !important;
+  font-size: 20px;
+  font-weight: lighter;
+}
+
+.searchbar {
+  margin-left: 200px;
+  font-size: 20px;
+  color: white;
+}
+
+.full-screen {
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+.content {
+  height: $content-size;
+}
+
+.horizontal-scroll {
+  height: $content-size;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  display: flex;
+}
+
+.content-block {
+  height: 100%;
+  min-width: 565px;
+  max-width: 565px;
+  border: 1px grey solid;
+  border-top: none;
+  border-bottom: none;
+  border-left: none;
+  transition: 0.3s;
+  padding-bottom: 10px;
+}
+
+.line {
+  border: 1px gray solid;
+  border-bottom: none;
+}
+
+.content-block:hover {
+  background-color: rgb(20, 20, 20);
+}
+
+.content-header {
+  background-color: white;
+  width: 100%;
+  min-height: 23px;
+}
+
+.content-header-text {
+  font-weight: bold;
+  font-size: 11px;
+}
+
+.content-container {
+  margin: 20px 40px;
+}
+
+.cat-tag {
+  @extend .content-header-text;
+  border: 1px grey solid;
+  display: inline-block;
+  padding: 3px 7px;
+  margin: 0;
+  color: gray;
+  margin-top: 20px;
+}
+
+.content-title {
+  font-size: 50px !important;
+  color: white;
+}
+
+.content-par {
+  color: gray;
+}
+
+.learn-more {
+  color: white;
+  text-decoration: none;
+}
+
+.content-image img {
+  width: 100%;
+}
+
+/* Dim background for the modal*/
+.modal {
+  display: none;
+  position: fixed; 
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.7); 
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  max-width: 40%;
+}
+
+/* The Close Button */
+.close {
+  color: black;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.link {
+  color: orange;
+}

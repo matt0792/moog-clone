@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Moog Music</title>
+    <link rel="stylesheet" href="main.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- Would love to remove this button but can't get modal to work without it for some reason.
+      not super familiar w using javascript in conjunction with html + css so that's probably why
+      I just set d-none as a rough fix -->
+    <button id="myBtn" class="d-none">Open Modal</button>
+    <!-- Modal -->
+    <!-- Shows credit and link to original website
+      I'm not super confident on this but I got a lot of 
+      reference from https://www.w3schools.com/howto/howto_css_modals.asp to get it working  -->
+    <div id="creditModal" class="modal">
+      <div class="modal-content">
+        <div class="d-flex">
+          <h1>Moog Website Clone</h1>
+          <span class="close ms-auto"><i class="bi bi-x-lg"></i></span>
+        </div>
+        <p class="mt-3">
+          This page is a clone of the moog homepage, as of October 2024.
+        </p>
+        <p>
+          The original site can be found
+          <a href="https://www.moogmusic.com/" class="link" target="blank">here</a>
+        </p>
+        <p class="m-3"></p>
+        <p>Made by Matt Thompson, with <i class="bi bi-heart"></i></p>
+      </div>
+    </div>
+    <div class="full-screen">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg bg-black navbar-dark w-100">
+        <div class="ms-4">
+          <a href="#" class="navbar-brand">
+            <img src="images/moog-logo.png" class="img-fluid" alt="Moog Logo" />
+          </a>
+        </div>
+        <div class="d-flex align-items-center">
+          <ul class="navbar-nav gap-5 ms-5 d-none d-xl-flex">
+            <li class="nav-item">
+              <a href="#" class="nav-link">Synthesizers</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Original Series</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">News</a>
+            </li>
+          </ul>
+          <div class="d-none d-xl-flex">
+            <input type="search" class="searchbar" placeholder="Search" />
+          </div>
+        </div>
+        <div class="d-flex ms-auto align-items-center">
+          <div class="me-3 d-block d-xl-none">
+            <button
+              class="navbar-search button-format"
+              type="button"
+              id="navbarSearch"
+            >
+              <span class="search-icon icon"><i class="bi bi-search"></i></span>
+            </button>
+          </div>
+          <div class="me-3">
+            <button
+              class="navbar-hamburger button-format"
+              type="button"
+              id="navbarToggle"
+            >
+              <span class="hamburger-icon icon"
+                ><i class="bi bi-list"></i
+              ></span>
+            </button>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Main content -->
+
+      <section class="bg-black content">
+        <div class="horizontal-scroll">
+          <!-- Block 1 -->
+          <div class="content-block d-flex flex-column">
+            <div
+              class="content-header d-flex align-items-center justify-content-start"
+            >
+              <div class="content-header-text ms-2">NEWS</div>
+            </div>
+            <div class="content-container mt-auto">
+              <div class="cat-tag">MUSE</div>
+              <div class="content-title mt-2">Introducing Muse</div>
+              <div class="content-par">
+                We are thrilled to announce the release of Muse, an eight-voice
+                analog bi-timbral polyphonic synthesizer designed to inspire and
+                elevate musical creativity.
+              </div>
+              <div class="my-2">
+                <a href="#" class="learn-more"
+                  ><i class="bi bi-arrow-up-right-square-fill"></i> Learn
+                  More</a
+                >
+              </div>
+              <div class="content-image mt-3">
+                <img src="images/muse-poster.png" alt="Muse Poster" />
+              </div>
+            </div>
+          </div>
+          <!-- Block 2 -->
+          <div class="content-block d-flex flex-column">
+            <div
+              class="content-header d-flex align-items-center justify-content-start"
+            >
+              <div class="content-header-text ms-2">FIRMWARE</div>
+            </div>
+            <div class="content-container mt-auto">
+              <div class="line mb-3"></div>
+              <div class="cat-tag">FIRMWARE</div>
+              <div class="content-title mt-2">
+                Moog Muse Firmware v1.2.0 now available
+              </div>
+              <div class="content-par">
+                This update introduces key improvements that elevate the
+                creative possibilities for Muse owners.
+              </div>
+              <div class="my-2">
+                <a href="#" class="learn-more"
+                  ><i class="bi bi-arrow-up-right-square-fill"></i> Learn
+                  More</a
+                >
+              </div>
+              <div class="content-image mt-3">
+                <img src="images/muse-img1.jpg" alt="Muse Image" />
+              </div>
+            </div>
+          </div>
+          <!-- Block 3 -->
+          <div class="content-block d-flex flex-column">
+            <div
+              class="content-header d-flex align-items-center justify-content-start"
+            >
+              <div class="content-header-text ms-2">NEWS</div>
+            </div>
+            <div class="content-container mt-auto">
+              <div class="line mb-3"></div>
+              <div class="cat-tag">SYNTHESIZER</div>
+              <div class="content-title mt-2">Muse</div>
+              <div class="content-par">
+                Meet Muse, an eight-voice analog bi-timbral polyphonic
+                synthesizer — the culmination of over 5 years of dreams, design,
+                and passion.
+              </div>
+              <div class="my-2">
+                <a href="#" class="learn-more"
+                  ><i class="bi bi-arrow-up-right-square-fill"></i> Learn
+                  More</a
+                >
+              </div>
+              <div class="content-image mt-3">
+                <img src="images/muse-img2.jpg" alt="Muse Image" />
+              </div>
+            </div>
+          </div>
+          <!-- Block 4 -->
+          <div class="content-block d-flex flex-column">
+            <div
+              class="content-header d-flex align-items-center justify-content-start"
+            >
+              <div class="content-header-text ms-2">ACCESSORY</div>
+            </div>
+            <div class="content-container mt-auto">
+              <div class="line mb-3"></div>
+              <div class="cat-tag">ACCESSORY</div>
+              <div class="content-title mt-2">
+                Moog Sound Studio Accessory Kit
+              </div>
+              <div class="content-par">
+                The Moog Sound Studio Accessory Kit is the 3-tier rack solution
+                your Mother Ecosystem synths have been waiting for.
+              </div>
+              <div class="my-2">
+                <a href="#" class="learn-more"
+                  ><i class="bi bi-arrow-up-right-square-fill"></i> Learn
+                  More</a
+                >
+              </div>
+              <div class="content-image mt-3">
+                <img src="images/studio-kit.jpg" alt="Studio Kit" />
+              </div>
+            </div>
+          </div>
+          <!-- Block 5 -->
+          <div class="content-block d-flex flex-column">
+            <div
+              class="content-header d-flex align-items-center justify-content-start"
+            >
+              <div class="content-header-text ms-2">LABRINTH</div>
+            </div>
+            <div class="content-container mt-auto">
+              <div class="line mb-3"></div>
+              <div class="cat-tag">SYNTHESIZER</div>
+              <div class="content-title mt-2">Labrynth</div>
+              <div class="content-par">
+                How deep does the rabbit hole go? Meet Labyrinth, an idea
+                machine that aims to answer that very question.
+              </div>
+              <div class="my-2">
+                <a href="#" class="learn-more"
+                  ><i class="bi bi-arrow-up-right-square-fill"></i> Learn
+                  More</a
+                >
+              </div>
+              <div class="content-image mt-3">
+                <img src="images/labrynth.jpg" alt="Labrynth Image" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="extraFunction.js" type="text/javascript"></script>
+  </body>
+</html>
