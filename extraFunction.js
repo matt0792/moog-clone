@@ -1,8 +1,3 @@
-// alert(`
-// This website is a clone of the moog homepage, as of October 2024.
-
-// Visit moogmusic.com to view the original`);
-
 document.addEventListener("wheel", function (e) {
   const scrollContainer = document.querySelector(".horizontal-scroll");
 
